@@ -6,12 +6,12 @@ class Alug < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/shirakiya/alug/releases/0.0.1/alug_0.0.1_darwin_amd64.tar.gz"
-    sha256 "114fe3abc000f9f1702f676b793643c07c7a2873ca3055c4e73bf03ee353c124"
+    url "https://github.com/shirakiya/alug/releases/download/0.0.1/alug_0.0.1_darwin_amd64.tar.gz"
+    sha256 "9797444332c53e732291b88fc8d80f6a9d9f967911a90c1daf1e91c5bd335bd0"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/shirakiya/alug/releases/0.0.1/alug_0.0.1_linux_amd64.tar.gz"
-      sha256 "a5a9678972fa4fb70764b72dbceeca49875d38374414d6d0cd640b7e4ead321b"
+      url "https://github.com/shirakiya/alug/releases/download/0.0.1/alug_0.0.1_linux_amd64.tar.gz"
+      sha256 "3f230ffe129426dee7803172b02f6a3d8922074c7039eba9b43da1716e436eed"
     end
   end
 
