@@ -7,11 +7,11 @@ class Alug < Formula
 
   if OS.mac?
     url "https://github.com/shirakiya/alug/releases/download/0.0.1/alug_0.0.1_darwin_amd64.tar.gz"
-    sha256 "9797444332c53e732291b88fc8d80f6a9d9f967911a90c1daf1e91c5bd335bd0"
+    sha256 "6919c016ae1d620b43e052c0a7dee20c6a2fcdf22fec009b15d93f506d6a284b"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/shirakiya/alug/releases/download/0.0.1/alug_0.0.1_linux_amd64.tar.gz"
-      sha256 "3f230ffe129426dee7803172b02f6a3d8922074c7039eba9b43da1716e436eed"
+      sha256 "7303b57b7f97820eb32099fd8c9aba2fd292fc253f9ebf7ce5c99289ff48c450"
     end
   end
 
