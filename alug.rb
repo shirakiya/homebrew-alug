@@ -2,16 +2,16 @@
 class Alug < Formula
   desc "CLI command to generate the URL to login AWS console."
   homepage "https://github.com/shirakiya/alug"
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/shirakiya/alug/releases/download/0.0.1/alug_0.0.1_darwin_amd64.tar.gz"
-    sha256 "6919c016ae1d620b43e052c0a7dee20c6a2fcdf22fec009b15d93f506d6a284b"
+    url "https://github.com/shirakiya/alug/releases/download/0.0.2/alug_0.0.2_darwin_amd64.tar.gz"
+    sha256 "c3cd1833b8238071457a1091433d39c2a3171df8c0d3f3c72952e7231d1b3023"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/shirakiya/alug/releases/download/0.0.1/alug_0.0.1_linux_amd64.tar.gz"
-      sha256 "7303b57b7f97820eb32099fd8c9aba2fd292fc253f9ebf7ce5c99289ff48c450"
+      url "https://github.com/shirakiya/alug/releases/download/0.0.2/alug_0.0.2_linux_amd64.tar.gz"
+      sha256 "4294b6976ecd940d31886d5e2b643e912f7bb7d0ad32814b407e1c21fe80e0d7"
     end
   end
 
