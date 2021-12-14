@@ -5,12 +5,20 @@
 class Alug < Formula
   desc "CLI command to generate the URL to login AWS console."
   homepage "https://github.com/shirakiya/alug"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/shirakiya/alug/releases/download/0.0.4/alug_0.0.4_darwin_arm64.tar.gz"
+      sha256 "542ba59a7891599b0ffd0d4fec728fdbb15f1c9a817b5653ccef82a3578dea1e"
+
+      def install
+        bin.install "alug"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/shirakiya/alug/releases/download/0.0.3/alug_0.0.3_darwin_amd64.tar.gz"
-      sha256 "8928237bd5354ddfc935feeeb897f1993c8e4c5c7cfc67591f0e7fe45178dcdc"
+      url "https://github.com/shirakiya/alug/releases/download/0.0.4/alug_0.0.4_darwin_amd64.tar.gz"
+      sha256 "4fd1c3ecb7deb07540ec9a7e0d16ca31dd91935750378da625cfd2220965ce0f"
 
       def install
         bin.install "alug"
@@ -19,9 +27,17 @@ class Alug < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/shirakiya/alug/releases/download/0.0.4/alug_0.0.4_linux_arm64.tar.gz"
+      sha256 "26a36e9efe62ad32159e3452f2ce1389fbef93f1da76e71697dd6b84b8496c1a"
+
+      def install
+        bin.install "alug"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/shirakiya/alug/releases/download/0.0.3/alug_0.0.3_linux_amd64.tar.gz"
-      sha256 "fdddc66466182039762d779f27e3f1d1cebf5a3c1e6640c17894a786f2ec364f"
+      url "https://github.com/shirakiya/alug/releases/download/0.0.4/alug_0.0.4_linux_amd64.tar.gz"
+      sha256 "045962666b8c9fc3cd0c5a9cd631097748fffb009db917f1321b6078d69b60de"
 
       def install
         bin.install "alug"
